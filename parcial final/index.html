@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>portafolio</title>
+</head>
+<body>
+
+<!-- barra de navegacion -->
+
+    <header class="header">
+        <div class="header__logo">
+          <img src="img/logoipsum-284.svg" alt="Logo" />
+        </div>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li><a href="#ilustrations" class="header__link">Ilustraciones</a></li>
+            <li><a href="#animations" class="header__link">Animaciones</a></li>
+            <li><a href="#porcelain" class="header__link">Porcelana</a></li>
+          </ul>
+        </nav>
+        
+        <a class="header__button" href="/contactame.html">contáctarme</a>
+      </header>
+
+      <!-- perfil -->
+
+      <section class="profile">
+        <div class="profile__photo">
+          <img class="profile__giff"src="/img/giff.gif" alt="Gif animado" class="profile__photo--image" width="217px">
+        </div>
+        <div class="profile__content">
+          <h1 class="profile__greeting">Hola!</h1>
+          <p class="profile__description">
+            Soy valentina moreno, estudiante de diseño grafico me interesan temas como la semiotica, la composición de imagenes, por lo que me apasionan areas como la ilustracion y la animación.busco transmitir mensajes visuales con profundidad y creatividad. En cada proyecto, me gusta expresar mis ideas a través de conceptos bien fundamentados aplicando mi interés en el diseño visual.
+          </p>
+          
+          <a class="profile__button" href="/sobre-mi.html">Saber más</a>
+        </div>
+      </section>
+
+      <!-- ultimos proyectos -->
+
+      <h2 class="carousel-title">Últimos Proyectos</h2>
+
+      <div class="carrusell-wraper">
+        <div class="carousel-container">
+        <button class="carousel-btn prev"><svg class="carousel-btn-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg></button>
+        <div class="carousel">
+            <div class="carousel-item"><img src="/img/poster representacion de mi.png" alt="Proyecto 1" width="395px"></div>
+            <div class="carousel-item"><img src="img/estilo de los 60's.png" alt="Proyecto 2" width="305px"></div>
+            <div class="carousel-item"><img src="/img/trabajo tipografico.jpg" alt="Proyecto 3" width="312px"></div>
+            <div class="carousel-item"><img src="/img/diseño de personajes.jpeg" alt="Proyecto 4" width="316px"></div>
+        </div>
+        <button class="carousel-btn next"><svg class="carousel-btn-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></button>
+    </div>
+
+      <!-- desplazamiento del carrusel -->
+
+        <script>
+            const carousel = document.querySelector('.carousel');
+            const prevBtn = document.querySelector('.carousel-btn.prev');
+            const nextBtn = document.querySelector('.carousel-btn.next');
+        
+            const scrollAmount = 220; // Desplazamiento en píxeles por clic
+        
+            nextBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        
+            prevBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        </script>
+
+        <!-- galeria de imagenes -->
+
+        <section class="ilustrations" id="ilustrations">
+            <h2>ILUSTRACIONES</h2>
+            <div class="card-container">
+                <!-- Tarjeta 1 -->
+                <div class="card" onclick="toggleCard(this)">
+                    <img src="/img/estilo de los 60's.png" alt="picture 1" width="200px">
+                    <div class="card-content">
+                        <h4>estilo de los 60</h4>
+                        <p>este cartel fue influenciado en el estilo de los años 60 e inspirado por los cartelistas marcelo dudovich, saul bass y milton glaser. </p>
+                    </div>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="card" onclick="toggleCard(this)">
+                    <img src="/img/diseño de personajes.jpeg" alt="picture 2" width="200px">
+                    <div class="card-content">
+                        <h4>diseño de personajes</h4>
+                        <p>El diseño de personajes es para una animación busca transmitir una narrativa emotiva y conmovedora. A través de características visuales cuidadosamente pensadas, cada personaje refleja su personalidad y carga emocional, contribuyendo a dar profundidad y autenticidad a la historia triste que se cuenta.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="card" onclick="toggleCard(this)">
+                    <img src="/img/poster representacion de mi.png" alt="picture 3" width="200px">
+                    <div class="card-content">
+                        <h4>acerca de mi</h4>
+                        <p>Esta pieza está inspirada en mí, reflejando mi personalidad introvertida y el valor que encuentro en la soledad, un espacio necesario para reconectar conmigo misma y disfrutar de mi propia compañía.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta 4 -->
+                <div class="card" onclick="toggleCard(this)">
+                    <img src="/img/trabajo tipografico.jpg" alt="picture 4" width="200px">
+                    <div class="card-content">
+                        <h4>caracterización tipográfica</h4>
+                        <p>Este proyecto se basó en la creación de tipografías personalizadas, donde cada palabra seleccionada se diseñó para reflejar y transmitir su esencia a través del estilo tipográfico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section class="porcelain" id="porcelain">
+        <h2>FIGURAS DE PORCELANA</h2>
+        <div class="card-container">
+            <!-- Tarjeta 1 -->
+            <div class="card" onclick="toggleCard(this)">
+                <img src="/img/pesebre 2.png" alt="Figura de porcelana 1" width="200px">
+                <div class="card-content">
+                    <h4>pesebre</h4>
+                    <p>representacion artesanal del nacimiento destacando sus personajes mas representativos como los reyes magos, jose maria y jesus con los animalitos.</p>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="card" onclick="toggleCard(this)">
+                <img src="/img/llaveros set de one piece (1).jpeg" alt="Figura de porcelana 2" width="200px">
+                <div class="card-content">
+                    <h4>llavero de polar</h4>
+                    <p>Miniaturas detalladas en porcelana fría, inspiradas en la serie One Piece, ideales para fans y coleccionistas.</p>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="card" onclick="toggleCard(this)">
+                <img src="/img/llaveros set de one piece (2).jpeg" alt="Figura de porcelana 3" width="200px">
+                <div class="card-content">
+                    <h4>llaveros tematica one piece</h4>
+                    <p>Figura minimalista en porcelana fría, ideal como accesorio único y personalizable. esta figura es una pieza basada en el personaje polar de la serie de los escandalosos.</p>
+                </div>
+            </div>
+
+           
+           
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h1>ES TODO!</h1>
+            <p><a href="https://www.behance.net/valentimoreno16?isa0=1">behance@com</a></p>
+            <p><a href="https://github.com/">github@com</a></p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

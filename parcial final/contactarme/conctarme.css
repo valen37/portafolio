@@ -1,0 +1,144 @@
+.box-sizing { 
+    border box ;
+margin: 0px; }
+
+/* barra de navegacion */
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: #131313; 
+    color: #fff;
+  }
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1d1d1d; 
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+  }
+
+.header__logo img {
+    height: 40px;
+  }
+
+.header__nav {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+.header__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+.header__link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+.header__link:hover {
+    color: #E60087; 
+  }
+
+.header__button {
+    background-color: #E60087; 
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+.header__button:hover {
+    background-color: #E66EB5; 
+    transform: scale(1.1); 
+  }
+
+  /* formulario */
+
+  .contact-section {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .contact-section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 200;
+  }
+  
+  .contact-section p a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .form-section {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+  }
+
+  .from__text{
+    font-weight: 200;
+  }
+  
+  .form-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-field {
+    background-color: #333333;
+    color: #666666;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    
+  }
+  
+  .footer {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .footer .behance-logo {
+    color: #ff00a5;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .logo-behance{
+    width: 30px;
+    height: 30px;
+    margin-left: 1099px;
+    margin-top: 20px;
+  }
+
+  .logo-behance{
+    bag
+  }
+
+  
